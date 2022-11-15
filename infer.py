@@ -10,7 +10,7 @@ from tqdm import tqdm
 
 import model_io
 import utils
-from models import UnetAdaptiveBins
+from adabins_models import UnetAdaptiveBins
 
 
 def _is_pil_image(img):

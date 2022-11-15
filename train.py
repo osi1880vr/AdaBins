@@ -15,7 +15,7 @@ import wandb
 from tqdm import tqdm
 
 import model_io
-import models
+import adabins_models
 import utils
 from dataloader import DepthDataLoader
 from loss import SILogLoss, BinsChamferLoss
@@ -70,8 +70,8 @@ def main_worker(gpu, ngpus_per_node, args):
 
     ###################################### Load model ##############################################
 
-    model = models.UnetAdaptiveBins.build(n_bins=args.n_bins, min_val=args.min_depth, max_val=args.max_depth,
-                                          norm=args.norm)
+    model = adabins_models.UnetAdaptiveBins.build(n_bins=args.n_bins, min_val=args.min_depth, max_val=args.max_depth,
+                                                  norm=args.norm)
 
     ################################################################################################
 

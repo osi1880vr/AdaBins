@@ -10,7 +10,7 @@ from tqdm import tqdm
 
 import model_io
 from dataloader import DepthDataLoader
-from models import UnetAdaptiveBins
+from adabins_models import UnetAdaptiveBins
 from utils import RunningAverageDict
 
 

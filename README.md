@@ -18,7 +18,7 @@ Official implementation of [Adabins: Depth Estimation using adaptive bins](https
 Move the downloaded weights to a directory of your choice (we will use "./pretrained/" here). You can then use the pretrained models like so:
 
 ```python
-from models import UnetAdaptiveBins
+from adabins_models import UnetAdaptiveBins
 import model_io
 from PIL import Image
 
@@ -26,7 +26,7 @@ MIN_DEPTH = 1e-3
 MAX_DEPTH_NYU = 10
 MAX_DEPTH_KITTI = 80
 
-N_BINS = 256 
+N_BINS = 256
 
 # NYU
 model = UnetAdaptiveBins.build(n_bins=N_BINS, min_val=MIN_DEPTH, max_val=MAX_DEPTH_NYU)
